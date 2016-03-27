@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QA</title>
+</head>
+<body>
+    {% for question in questions %}
+        {% block question_title %}
+            <h2><a href="{{ question.get_absolute_url }}">{{ question.title }}</a></h2>
+        {% endblock %}
+    {% endfor %}
+    {% include "pagination.html" %}
+</body>
+</html>
